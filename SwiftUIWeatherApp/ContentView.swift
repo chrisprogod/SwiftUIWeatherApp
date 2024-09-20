@@ -34,8 +34,8 @@ struct ContentView: View {
                     WeatherDayView(dayOfTheWeek: "TUE", imageName: "cloud.sun.fill", temperature: 17, spacing: 7)
                     WeatherDayView(dayOfTheWeek: "WED", imageName: "sun.max.fill", temperature: 25, fsize: 40, spacing: 12)
                     WeatherDayView(dayOfTheWeek: "THU", imageName: "cloud.fill", temperature: 16, fsize: 42, spacing: 11)
-                    WeatherDayView(dayOfTheWeek: "FRI", imageName: "cloud.rain.fill", temperature: 17, fsize: 42, spacing: 11)
-                    WeatherDayView(dayOfTheWeek: "SAT", imageName: "wind", temperature: 17, fsize: 40, spacing: 12)
+                    WeatherDayView(dayOfTheWeek: "FRI", imageName: "cloud.rain.fill", temperature: 14, fsize: 42, spacing: 11)
+                    WeatherDayView(dayOfTheWeek: "SAT", imageName: "wind", temperature: 19, fsize: 40, spacing: 12)
                     
                     
                 }
