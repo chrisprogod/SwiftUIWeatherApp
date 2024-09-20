@@ -10,33 +10,54 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [.blue, .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [.blue, Color("lightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
-            VStack(spacing: 20) {
+            VStack() {
                 Text("Ottawa, ON")
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
-                    .padding(10)
-                Image(systemName:"cloud.sun.fill")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 180, height: 180)
-                    .padding(.top, 30)
+                    .padding()
                 
-                Text("20°C")
-                    .font(.system(size: 64, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .padding(.top, 10)
-                    .padding(.bottom, 30)
+                VStack{
+                    Image(systemName:"cloud.sun.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 180, height: 180)
+                    
+                    Text("20°C")
+                        .font(.system(size: 70, weight: .semibold, design: .default))
+                        .foregroundColor(.white)
+                }
+
+                .padding(.bottom, 40)
                 
                 HStack(spacing: 25) {
-                    WeatherDayView(dayOfTheWeek: "TUE", imageName: "cloud.sun.fill", temperature: 17, spacing: 7)
-                    WeatherDayView(dayOfTheWeek: "WED", imageName: "sun.max.fill", temperature: 25, fsize: 40, spacing: 12)
-                    WeatherDayView(dayOfTheWeek: "THU", imageName: "cloud.fill", temperature: 16, fsize: 42, spacing: 11)
-                    WeatherDayView(dayOfTheWeek: "FRI", imageName: "cloud.rain.fill", temperature: 14, fsize: 42, spacing: 11)
-                    WeatherDayView(dayOfTheWeek: "SAT", imageName: "wind", temperature: 19, fsize: 40, spacing: 12)
+                    WeatherDayView(dayOfTheWeek: "TUE",
+                                   imageName: "cloud.sun.fill",
+                                   temperature: 17,
+                                   spacing: 7)
                     
+                    WeatherDayView(dayOfTheWeek: "WED",
+                                   imageName: "sun.max.fill",
+                                   temperature: 25,
+                                   fsize: 40,
+                                   spacing: 12)
+                    
+                    WeatherDayView(dayOfTheWeek: "THU",
+                                   imageName: "cloud.fill",
+                                   temperature: 16, fsize: 42,
+                                   spacing: 11)
+                    WeatherDayView(dayOfTheWeek: "FRI",
+                                   imageName: "cloud.rain.fill",
+                                   temperature: 14,
+                                   fsize: 42,
+                                   spacing: 11)
+                    WeatherDayView(dayOfTheWeek: "SAT",
+                                   imageName: "wind",
+                                   temperature: 19,
+                                   fsize: 40,
+                                   spacing: 12)
                     
                 }
         
